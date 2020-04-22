@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <body>
+        <canvas id="myCanvas" width="1000" height="1000"
+        style="border:1px solid #c3c3c3;">
+        Your browser does not support the canvas element.
+        </canvas>
+        <script src="map.json"></script>
+        <script>
+            var canvas = document.getElementById("myCanvas");
+            var ctx = canvas.getContext("2d");
+            
+            for (let index = 0; index < data.length; index++) {
+                cell = data[index];
+                cell.height = cell.height - 2;
+                if (cell.height < 0) { cell.height = 0}
+                if (cell.height <= 29) {
+                    ctx.fillStyle = "#03a9fc"
+                } else if (cell.height <= 69) {
+                    ctx.fillStyle = "#48ff00"
+                } else if (cell.height <= 99) {
+                    ctx.fillStyle = "#106616"
+                } else if (cell.height <= 129) {
+                    ctx.fillStyle = "#874f2e"
+                } else if (cell.height <= 199) {
+                    ctx.fillStyle = "#807e73"
+                } else {
+                    ctx.fillStyle = "#ffffff"
+                }
+                ctx.fillRect(data[index].x * 10, data[index].y * 10, 10, 10)
+            }
+        </script> 
+    </body>
+</html>

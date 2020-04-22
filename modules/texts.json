@@ -1,0 +1,8 @@
+{
+	"game_menu": {
+		"menu_text": "Welcome to Rule!\nIn this game you play as a medieval ruler and try to gain as much power as possible.\nOr at least you try to stay alive.\n",
+		"start_new_game": "New Game",
+		"load_game": "Load Game",
+		"exit_game": "Exit Game"
+	}
+}
